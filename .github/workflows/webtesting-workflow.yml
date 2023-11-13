@@ -47,16 +47,16 @@ jobs:
           if-no-files-found: ignore
           retention-days: 2
 
-      # - name: download Tests Results
-      #   if: always()
-      #   uses: actions/download-artifact@v2
-      #   with:
-      #     name: results-${{ matrix.browser }}
+      - name: Download Tests Results
+        if: always()
+        uses: actions/download-artifact@v1
+        with:
+          name: results-${{ matrix.browser }}
 
-      # - name: Send Report
-      #   if: always()
-      #   uses: joonvena/robotframework-reporter-action@v2
-      #   with:
-      #     report-path: results-${{ matrix.browser }}
-      #     gh_access_token: ${{ secrets.GITHUB_TOKEN }}
-      #     # show_passed_tests: false
+      - name: Send Report
+        if: always()
+        uses: joonvena/robotframework-reporter-action@v2
+        with:
+          report-path: results-${{ matrix.browser }}
+          gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+          show_passed_tests: false
