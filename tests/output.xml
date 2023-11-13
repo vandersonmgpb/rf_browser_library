@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231112 10:50:20.325" rpa="false" schemaversion="4">
+<suite id="s1" name="Serve-Rest-Front" source="C:\Users\a892326\OneDrive - EDITORA E DISTRIBUIDORA EDUCACIONAL S A\Documentos\Curso Udemy\AutomacaoRobotMayFernandes\tests\serve-rest-front.robot">
+<test id="s1-t1" name="Login com sucesso Serve Rest Front" line="5">
+<kw name="Abrir o navegador" library="serve-rest-front">
+<kw name="New Browser" library="Browser">
+<arg>browser=${BROSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231112 10:50:21.033" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\a892326\\OneDrive - EDITORA E DISTRIBUIDORA EDUCACIONAL S A\\Documentos\\Curso Udemy\\AutomacaoRobotMayFernandes\\tests\\browser\\traces\\d0f56e0d-d74f-418a-8057-716a06dd5a69"}</msg>
+<msg timestamp="20231112 10:50:21.694" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\a892326\\OneDrive - EDITORA E DISTRIBUIDORA EDUCACIONAL S A\\Documentos\\Curso Udemy\\AutomacaoRobotMayFernandes\\tests\\browser\\traces\\d0f56e0d-d74f-418a-8057-716a06dd5a69"}</msg>
+<status status="PASS" starttime="20231112 10:50:21.033" endtime="20231112 10:50:21.694"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>viewport={'width': 1200, 'height': 800}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20231112 10:50:21.695" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": "",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 800,
+    "width": 1200
+  }
+}</msg>
+<msg timestamp="20231112 10:50:21.741" level="INFO">Successfully created context. </msg>
+<msg timestamp="20231112 10:50:21.741" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 800, 'width': 1200}}</msg>
+<status status="PASS" starttime="20231112 10:50:21.694" endtime="20231112 10:50:21.741"/>
+</kw>
+<status status="PASS" starttime="20231112 10:50:21.033" endtime="20231112 10:50:21.741"/>
+</kw>
+<kw name="Ir para o site Serve Rest Front" library="serve-rest-front">
+<kw name="New Page" library="Browser">
+<arg>url=${SITE_SERV_REST}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20231112 10:50:24.815" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev</msg>
+<status status="PASS" starttime="20231112 10:50:21.755" endtime="20231112 10:50:24.815"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:50:29.815" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231112 10:50:24.815" endtime="20231112 10:50:29.815"/>
+</kw>
+<status status="PASS" starttime="20231112 10:50:21.755" endtime="20231112 10:50:29.815"/>
+</kw>
+<kw name="Preencher os dados do novo usuário e cadastrar" library="serve-rest-front">
+<kw name="Record Selector" library="Browser">
+<tag>PageContent</tag>
+<doc>Record the selector that is under mouse.</doc>
+<msg timestamp="20231112 10:52:07.601" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20231112 10:52:07.601" level="INFO">See also file:///C:/Users/a892326/OneDrive%20-%20EDITORA%20E%20DISTRIBUIDORA%20EDUCACIONAL%20S%20A/Documentos/Curso%20Udemy/AutomacaoRobotMayFernandes/tests/playwright-log.txt for additional details.</msg>
+<msg timestamp="20231112 10:52:07.601" level="FAIL">Execution terminated by signal</msg>
+<status status="FAIL" starttime="20231112 10:50:29.817" endtime="20231112 10:52:07.617"/>
+</kw>
+<status status="FAIL" starttime="20231112 10:50:29.816" endtime="20231112 10:52:07.618"/>
+</kw>
+<status status="FAIL" starttime="20231112 10:50:21.027" endtime="20231112 10:52:07.618">Execution terminated by signal</status>
+</test>
+<status status="FAIL" starttime="20231112 10:50:20.325" endtime="20231112 10:52:07.674"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Serve-Rest-Front">Serve-Rest-Front</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
