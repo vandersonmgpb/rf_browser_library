@@ -3,7 +3,7 @@ run-name: On Push - Web Tests Run
 on: [push]
 
 jobs:
-  test:
+  web-test:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -15,7 +15,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Node.js 19.1
-        uses: actions/setup-python@v3
+        uses: actions/setup-node@v3
         with:
           node-version: '19.1'
       
